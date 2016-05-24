@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head profile="http://www.w3.org/2005/10/profile">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>TechNinzaz</title>
+	<link rel="icon" type="image/png" href="images/logo_32x32px.png">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link href="style.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,700,900" rel="stylesheet">
+	<script src="js/modernizr-2.6.1.min.js"></script>
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+
+	<script>
+		function success(position) {
+  var s = document.querySelector('#status');
+  
+  if (s.className == 'success') {
+    // not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back    
+    return;
+  }
+  
+  s.innerHTML = "Found you!";
+  s.className = 'success';
+  var infowindow;
+  var mapcanvas = document.createElement('div');
+  mapcanvas.id = 'mapcanvas';
+  mapcanvas.style.height = '550px';
+  mapcanvas.style.width = '450px';
+  mapcanvas.style.border = '3px solid grey';
+    
+  document.querySelector('aside').appendChild(mapcanvas);
+  
+  var latlng = new google.maps.LatLng(12.909171, 77.564189);
+  var myOptions = {
+    zoom: 16,
+    center: latlng,
+    mapTypeControl: false,
+    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+  
+  infowindow = new google.maps.InfoWindow();
+
+  var marker = new google.maps.Marker({
+      position: latlng, 
+      map: map, 
+      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+  	infowindow.setContent('<b style= "font-size: 1.2em !important;">TechNinzaz Bangalore</b><br/><b>Phn No: 9739789657</b>');
+    infowindow.open(map, this);
+  });
+}
+
+function error(msg) {
+  var s = document.querySelector('#status');
+  s.innerHTML = typeof msg == 'string' ? msg : "failed";
+  s.className = 'fail';
+  
+  // console.log(arguments);
+}
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+} else {
+  error('not supported');
+}
+
+	</script>
+</head>
+
+<body>
+	<header id="master-header" class="clearfix" role="banner">
+		<div class="work" style="float:right;">
+			<a href="https://twitter.com/Techninzaz">
+				<img class="socialMedia" src="images/designer/twittericon.png" />
+			</a> 
+			<a href="https://www.facebook.com/Techninzaz/">
+				<img class="socialMedia" src="images/facebook.png" />
+			</a>
+			<span class="callBlock"><img src="images/designer/phoneicon.png" class="callImg" /> +91-97397-89657 </span>
+		</div>
+		<hgroup>
+			<h1 id="site-title">
+				<a href="index.html" title="Your Site Name">
+					<img src="images/logo_128x128px.png" class="ourLogo" />
+					<img src="images/logo2.png" class="ourName" />
+					<span class="newClass2">Coach </span>&nbsp;<span><img src="images/Separator-Line-1.jpg" class="seperater" /></span>&nbsp;<span class="newClass2">Educate </span>&nbsp;<span><img src="images/Separator-Line-1.jpg" class="seperater" /></span>&nbsp;<span class="newClass2">Inspire </span>
+				</a>
+			</h1>
+		</hgroup>
+	</header>
+<div id="main" class="row clearfix">
+	<nav class="main-navigation clearfix span12" role="navigation">
+		<h3 class="assistive-text">Main menu</h3>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="courses.html">Courses</a>
+				<ul class="sub-menu">
+					<li><a href="mca.html">MCA</a></li>
+					<li><a href="bca.html">BCA</a></li>
+					<li><a href="puc.html">PUC</a></li>
+					<li><a href="project.html">Projects</a></li>
+				</ul>
+			</li>
+			<li><a href="c2c.html">C2C</a></li>
+			<li class="current"><a href="contact.html">Contact</a></li>
+			<li><a href="register.html">Register Online</a></li>
+		</ul>
+	</nav> <!-- #main-navigation -->
+
+<div id="content" role="main" class="span7">
+	<article class="page hentry">
+		<header class="entry-header">
+			<h1 class="entry-title">Contact</h1>
+		</header> <!-- .entry-header -->
+		<form id="contactform">
+			<fieldset class="row">
+				<legend>Contact me :)</legend>
+				<p>
+					<label for="your-name">Your Name</label>
+					<input type="text" name="name" id="ur_name" class="input-xlarge">
+				</p>
+				<p>
+					<label for="your-email">Your Email <span class="required">(required)</span></label>
+					<input type="email" name="email" id="ur_email" class="input-xlarge" required>
+				</p>
+				<p>
+					<label for="your-subject">Subject</label>
+					<input type="text" name="subject" id="ur_subject" class="input-xlarge">
+				</p>
+				<p>
+					<label for="your-message">Your Query <span class="required">(required)</span></label>
+					<textarea name="message" cols="50" rows="10" id="ur_query" class="input-xxlarge" required placeholder="What do you want to say?"></textarea>
+				</p>
+				<p>
+					<input type="button" name="submit" id="contactSubmission" class="primary" value="Send Message">
+				</p>
+			</fieldset>
+		</form>
+	</article> <!-- .page -->
+</div> <!-- #content -->
+<div id="sidebar" role="complementary" class="span4">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">Find Us in Map</h1>
+	</header> <!-- .entry-header -->
+
+	<aside class="widget">
+		<div class="address"> 
+			<p class="addressHeading">Office Address:</p>
+			<p class="addressDetails"> #1535/2, Sharanya Towers, 14th Main, 1st Stage </p>
+			<p class="addressDetails"> Kumaraswamy Layout, Bangalore - 560078 </p>
+			<p class="addressDetails"> Contact: 9739789657 </p>
+		</div>
+		<p style="color: black; font-size:1em;">Finding location: <span id="status">searching...</span></p>
+	    
+    </aside> <!-- .widget -->
+
+</div> <!-- #sidebar -->
+
+</div> <!-- #main -->
+
+	<footer id="footer" role="contentinfo">
+		<p style="color: #FFFFFF;">
+			Follow Us: &nbsp;<a href="https://twitter.com/Techninzaz"><img class="socialMedia" src="images/designer/twittericon.png" /></a> <span class="sep">|</span> <a href="https://www.facebook.com/Techninzaz/"><img class="socialMedia" src="images/facebook.png" /></a><br/>
+			Copyright &copy; 2015 <a href="#" id="footerHighlights">www.techninzaz.com</a>
+			<span class="sep">|</span>
+			Design by <a href="#" id="footerHighlights" title="Design by AnkanMukhopadhyay">TechNinzaz</a> <br/>
+			
+		</p>
+	</footer> <!-- #footer -->
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	
+	<!-- Load custom scripts -->
+	<script src="js/script.js"></script>
+</body>
+</html>

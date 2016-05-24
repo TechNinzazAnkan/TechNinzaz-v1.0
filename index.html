@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head profile="http://www.w3.org/2005/10/profile">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>TechNinzaz</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="image/png" href="images/logo_32x32px.png">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Merriweather:400,700,900" rel="stylesheet">
+	<script src="js/modernizr-2.6.1.min.js"></script>
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+	<link rel="stylesheet" href="css/responsiveslides.css">
+	<script src="js/responsiveslides.min.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<script>
+		$(document).on('click', '#twitterGo', function(){
+			alert("Clicked");
+			window.open("https://twitter.com/Techninzaz");
+		});
+	</script>
+	<script>
+	    $(function () {
+	      $("#slider4").responsiveSlides({
+	        	auto: true,
+	        	pager: false,
+	        	nav: true,
+	        	speed: 500,
+	        	namespace: "callbacks",
+	        	before: function () {
+	        		$('.events').append("<li>before event fired.</li>");
+	        	},
+	        	after: function () {
+	        		$('.events').append("<li>after event fired.</li>");
+	        	}
+	      	});
+
+	    });
+  </script>
+	<!-- Google Analytics -->
+	<script>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-72148801-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<script async src='//www.google-analytics.com/analytics.js'></script>
+	<!-- End Google Analytics -->
+</head>
+<body>
+	<header id="master-header" class="clearfix" role="banner">
+		<div class="work" style="float:right;">
+			<a href="https://twitter.com/Techninzaz">
+				<img class="socialMedia" src="images/designer/twittericon.png" />
+			</a> 
+			<a href="https://www.facebook.com/Techninzaz/">
+				<img class="socialMedia" src="images/facebook.png" />
+			</a>
+			<span class="callBlock"><img src="images/designer/phoneicon.png" class="callImg" /> +91-97397-89657 </span>
+		</div>
+		<hgroup>
+			<h1 id="site-title">
+				<a href="index.html" title="Your Site Name">
+					<img src="images/logo_128x128px.png" class="ourLogo" />
+					<img src="images/logo2.png" class="ourName" />
+					<span class="newClass2">Coach </span>&nbsp;<span><img src="images/Separator-Line-1.jpg" class="seperater" /></span>&nbsp;<span class="newClass2">Educate </span>&nbsp;<span><img src="images/Separator-Line-1.jpg" class="seperater" /></span>&nbsp;<span class="newClass2">Inspire </span>
+				</a>
+			</h1>
+		</hgroup>
+	</header>
+
+<div id="main" class="row">
+	<nav class="main-navigation clearfix span12" role="navigation">
+		<h3 class="assistive-text">Main menu</h3>
+		<ul>
+			<li class="current"><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="courses.html">Courses</a>
+				<ul class="sub-menu">
+					<li><a href="mca.html">MCA</a></li>
+					<li><a href="bca.html">BCA</a></li>
+					<li><a href="#">PUC</a></li>
+					<li><a href="#">Projects</a></li>
+				</ul>
+			</li>
+			<li><a href="c2c.html">C2C</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="register.html">Register Online</a></li>
+		</ul>
+	</nav>
+
+<div id="content" role="main" class="span12">
+
+	<article class="page hentry">
+			
+			<!-- Carousel Block
+			================================================== -->
+			<section id="forms">
+				<h1></h1>
+				<div id="wrapper">
+					<!-- Slideshow 4 -->
+					<div class="callbacks_container">
+						<ul class="rslides" id="slider4">
+							<li>
+								<img src="images/designer/banner2.jpg" alt="" />
+								<a href="register.html" class="registerClick">
+									<img src="images/registerButton.png" class="registerResponsive" style="position: absolute; text-shadow: none;  width: 200px; padding-top: 4em;" /> 
+								</a>
+								<p class="caption"><a href="register.html">Register With Us</a></p>
+							</li>
+							<li>
+								<img src="images/designer/banner1.jpg" alt="">
+								<p class="caption"><a href="about.html">About Us</a></p>
+							</li>
+							<li>
+								<img src="images/designer/banner3.jpg" alt="">
+								<p class="caption">Latest Update</p>
+							</li>
+							<li>
+								<img src="images/designer/banner4.jpg" alt="">
+								<p class="caption"><a href="c2c.html">Campus 2 Corporate</a></p>
+							</li>
+					  	</ul>
+					</div>
+				</div>
+			</section> <!-- #Carousel_Block -->
+			
+
+			<!-- Code
+			================================================== -->
+			<section id="code">
+				<h1>Who are Techninzaz <small>Small Introduction</small></h1>
+				<div class="row">
+					<div class="span4">
+						<h2 class="locate">Coach</h2>
+						<a href="#" title="Post Heading"><img src="images/designer/educate2.png" class="coachEduInspire"/></a>
+						<p></p> 
+						<p><strong><i> “Better than a thousand days of diligent studies is one day with a good teacher !” </i ></strong></p>
+						<pre class="prettyprint ours">
+							At Techninzaz, we coach and enhance every student’s potential to build their success stories not only in colleges, but also in the corporate workplace. We are here with the combination of academic and core corporate industry experience which will equip every student with all the necessary study and career skills.
+						</pre>
+					</div> <!-- .span4 -->
+
+					<div class="span4">
+						<h2 class="locate">Educate</h2>
+						<a href="#" title="Post Heading"><img src="images/designer/educate1.png" class="coachEduInspire"/></a>
+						<p><strong><i>"The object of education is to prepare the young to educate themselves throughout their lives."</i></strong></p>
+						<pre class="prettyprint linenums">
+							At Techninzaz, we are not restricting education only to the old­school books and study notes. Extensive knowledge on important topics with optimised and student­friendly notes along with online materials will help every student to understand things in a better and simpler way. We are here to educate and prepare every students with ‘beyond­the­books’ knowledge.
+						</pre>
+						
+					</div> <!-- .span4 -->
+
+					<div class="span4">
+						<h2 class="locate">Inspire</h2>
+						<a href="#" title="Post Heading"><img src="images/designer/inspire1.png" class="coachEduInspire"/></a>
+						<p><strong><i>"If you do one thing every day towards your dreams, you're doing much more than most."</i></strong></p>
+						<pre class="prettyprint linenums">
+							“The future belong to those who believe in the beauty of their dreams !”. Our Campus to Corporate (C2C) module is to inspire every student to develop skills to succeed and become quality professionals in the corporate industry, after all, an inspiration is the best medicine to become the best from an average.
+						</pre>
+					</div> <!-- .span -->
+				</div> <!-- .row -->
+			</section> <!-- #code -->
+
+		</div> <!-- .entry-content -->
+
+	</article> <!-- .post.hentry -->
+
+</div> <!-- #content -->
+
+</div> <!-- #main -->
+
+	<footer id="footer" role="contentinfo">
+		<p style="color: #FFFFFF;">
+			Follow Us: &nbsp;<a href="https://twitter.com/Techninzaz"><img class="socialMedia" src="images/designer/twittericon.png" /></a> <span class="sep">|</span> <a href="https://www.facebook.com/Techninzaz/"><img class="socialMedia" src="images/facebook.png" /></a><br/>
+			Copyright &copy; 2015 <a id="footerHighlights" href="#">www.techninzaz.com</a>
+			<span class="sep">|</span>
+			Design by <a href="#" id="footerHighlights" title="Design by AnkanMukhopadhyay">TechNinzaz</a> <br/>
+			
+		</p>
+	</footer> <!-- #footer -->
+	
+	<script src="js/script.js"></script>
+</body>
+</html>
